@@ -6,6 +6,11 @@ services:
       context: ./
     image: muccg/logspout-logstash:${GIT_BRANCH}
 
+  prod:
+    build:
+      context: ./
+    image: muccg/logspout-logstash:${DOCKER_LOGSPOUT_VERSION}
+
   latest:
     extends:
       file: docker-compose-build.yml
